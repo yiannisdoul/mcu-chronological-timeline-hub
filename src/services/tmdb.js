@@ -1,29 +1,30 @@
-// src/services/tmdb.js
 import axios from 'axios';
 
-// Access variables safely
 const apiKey = import.meta.env.VITE_TMDB_API_KEY;
 const baseUrl = import.meta.env.VITE_TMDB_BASE_URL;
 const imageBaseUrl = import.meta.env.VITE_TMDB_IMAGE_URL;
 
 const tmdbClient = axios.create({
   baseURL: baseUrl,
-  params: {
-    api_key: apiKey
-  }
+  params: { api_key: apiKey }
 });
 
-export const getMoviePosterUrl = async (tmdbId) => {
+// Now accepts a second argument: 'type'
+export const getMoviePosterUrl = async (tmdbId, type) => {
+  if (!tmdbId) return null;
+
+  // Determine the correct endpoint based on your JSON "type" field
+  // If type is "Series", "Series-Break", or "Special", look in TV. Otherwise, Movie.
+  const endpointType = (type && (type.includes('Series') || type === 'Special')) ? 'tv' : 'movie';
+
   try {
-    // We are only fetching the basic details to get the image path
-    const response = await tmdbClient.get(`/movie/${tmdbId}`);
+    const response = await tmdbClient.get(`/${endpointType}/${tmdbId}`);
     
     if (response.data.poster_path) {
       return `${imageBaseUrl}${response.data.poster_path}`;
     }
-    return null; // Handle missing poster
   } catch (error) {
-    console.error(`Error fetching TMDB ID ${tmdbId}`, error);
-    return null; // Return fallback placeholder in component
+    console.error(`Failed to fetch ${endpointType} with ID ${tmdbId}`, error);
   }
+  return null;
 };

@@ -1,62 +1,158 @@
 <script setup>
-import { computed } from 'vue';
+import { ref, computed, onMounted, onUnmounted } from 'vue';
 import { useRoute } from 'vue-router';
-// Import the JSON list you created earlier
 import allMovies from '../../data/marvel_data.json';
+import MovieCard from './MovieCard.vue';
 
 const route = useRoute();
-// Capture the filter from the URL (e.g., 'phase-1')
 const filterType = route.params.filter;
+const containerRef = ref(null);
+const activeMovieId = ref(null);
+let observer = null;
+let resizeObserver = null;
 
-// Computed Property: Filters the master list based on the route
+// 1. FILTERING
 const filteredMovies = computed(() => {
-  console.log("Filtering for:", filterType); // Debugging check
-  
-  // 1. Ultimate Order (Show Everything)
-  if (filterType === 'super-chrono') {
-    return allMovies;
-  }
-  
-  // 2. Saga Filtering (e.g. 'infinity')
+  if (filterType === 'super-chrono') return allMovies;
   if (filterType === 'infinity' || filterType === 'multiverse') {
-    // Note: Our JSON uses capitalized 'Infinity'/'Multiverse', so we capitalize the first letter
-    const sagaKey = filterType.charAt(0).toUpperCase() + filterType.slice(1);
-    return allMovies.filter(m => m.saga === sagaKey);
+    return allMovies.filter(m => m.saga && m.saga.toLowerCase() === filterType.toLowerCase());
   }
-  
-  // 3. Phase Filtering (e.g. 'phase-1')
   if (filterType.includes('phase')) {
-    const phaseNum = filterType.split('-')[1]; // Get the number '1'
-    
-    // Handle Special 'Prequel' or 'Multiverse' phases for non-MCU
-    // For standard phases, convert to integer
-    if (!isNaN(phaseNum)) {
-       return allMovies.filter(m => m.phase == phaseNum);
-    }
+    const phaseNum = filterType.split('-')[1];
+    return allMovies.filter(m => m.phase == phaseNum);
   }
-  
-  // Fallback
   return allMovies;
 });
+
+// 2. INTERSECTION OBSERVER
+const initObserver = () => {
+  if (observer) observer.disconnect();
+
+  const isDesktop = window.innerWidth >= 768;
+  
+  // ROOT MARGIN SETTINGS:
+  // Desktop: 0px -50% (Razor thin vertical line in center)
+  // Mobile: -40% 0px (Horizontal strip in center). 
+  // We use -40% instead of -50% on mobile to make it "catch" the cards easier on touch screens.
+  const rootMargin = isDesktop 
+    ? '0px -50% 0px -50%'   
+    : '-40% 0px -40% 0px';  
+
+  const options = {
+    root: containerRef.value,
+    rootMargin: rootMargin,
+    threshold: 0
+  };
+
+  observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        activeMovieId.value = parseInt(entry.target.dataset.id);
+      }
+    });
+  }, options);
+
+  const anchors = document.querySelectorAll('.observer-target');
+  anchors.forEach(anchor => observer.observe(anchor));
+};
+
+onMounted(() => {
+  setTimeout(initObserver, 100);
+  resizeObserver = new ResizeObserver(() => {
+    initObserver();
+  });
+  if (containerRef.value) {
+    resizeObserver.observe(containerRef.value);
+  }
+});
+
+onUnmounted(() => {
+  if (observer) observer.disconnect();
+  if (resizeObserver) resizeObserver.disconnect();
+});
+
+// 3. MOUSE WHEEL (Desktop)
+const handleWheel = (evt) => {
+  if (window.innerWidth >= 768 && containerRef.value && evt.deltaY !== 0) {
+    evt.preventDefault();
+    containerRef.value.scrollLeft += evt.deltaY * 3; 
+  }
+};
 </script>
 
 <template>
-  <div class="p-10 text-white">
-    <div class="mb-10">
-      <h1 class="text-4xl font-bold uppercase text-yellow-500 mb-2">{{ filterType }} Timeline</h1>
-      <router-link to="/" class="text-sm text-gray-400 hover:text-white underline">← Back to Hub</router-link>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div 
-        v-for="movie in filteredMovies" 
-        :key="movie.id"
-        class="border border-gray-800 p-4 rounded bg-gray-900"
-      >
-        <h3 class="font-bold text-lg">{{ movie.title }}</h3>
-        <p class="text-sm text-gray-500">{{ movie.date_in_universe }}</p>
-        <p class="text-xs text-blue-400 mt-2">Phase: {{ movie.phase }}</p>
+  <div 
+    ref="containerRef"
+    @wheel="handleWheel"
+    class="relative h-screen w-screen bg-black no-scrollbar 
+           overflow-y-auto overflow-x-hidden snap-y snap-mandatory
+           md:overflow-x-auto md:overflow-y-hidden md:snap-x md:snap-mandatory md:scroll-auto"
+  >
+    
+    <div class="fixed top-0 left-0 w-full p-4 z-40 bg-gradient-to-b from-black via-black/90 to-transparent md:bg-none md:w-auto md:p-6 pointer-events-none">
+      <div class="pointer-events-auto">
+        <router-link to="/" class="text-white/50 hover:text-white uppercase tracking-widest text-[10px] font-bold">← Hub</router-link>
+        <h1 class="text-3xl font-black text-white italic uppercase shadow-black drop-shadow-lg leading-none">
+          {{ filterType.replace('-', ' ') }}
+        </h1>
       </div>
     </div>
+
+    <div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full border-4 border-white bg-red-600 z-50 shadow-[0_0_20px_white] pointer-events-none"></div>
+
+    <div class="hidden md:flex flex-row items-center h-full px-[50vw] w-max relative pt-0">
+      
+      <div class="absolute top-1/2 left-0 w-full h-1.5 bg-white -translate-y-1/2 z-0 shadow-[0_0_15px_white]"></div>
+
+      <div 
+        v-for="(movie, index) in filteredMovies" 
+        :key="movie.id"
+        class="movie-card-wrapper relative px-12 inline-block align-middle snap-center" 
+      >
+        <div 
+          class="observer-target absolute top-1/2 left-1/2 w-1 h-1 -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-0"
+          :data-id="movie.id"
+        ></div>
+
+        <div :class="index % 2 === 0 ? '-translate-y-48' : 'translate-y-48'">
+          <MovieCard 
+            :movie="movie" 
+            :index="index" 
+            :isActive="activeMovieId === movie.id"
+          />
+        </div>
+
+      </div>
+    </div>
+
+    <div class="md:hidden relative w-full min-h-screen py-[50vh] flex flex-col gap-24">
+      <div class="absolute top-0 left-1/2 h-full w-1.5 bg-white -translate-x-1/2 z-0 shadow-[0_0_15px_white]"></div>
+      
+      <div 
+        v-for="(movie, index) in filteredMovies" 
+        :key="movie.id"
+        class="movie-card-wrapper relative grid grid-cols-2 w-full snap-center"
+      >
+        <div class="observer-target absolute top-1/2 left-1/2 w-1 h-1 -translate-x-1/2 -translate-y-1/2" :data-id="movie.id"></div>
+
+        <div v-if="index % 2 === 0" class="col-span-1 flex justify-end pr-8">
+           <MovieCard :movie="movie" :index="index" :isActive="activeMovieId === movie.id" />
+        </div>
+        <div v-if="index % 2 !== 0" class="col-start-2 flex justify-start pl-8">
+           <MovieCard :movie="movie" :index="index" :isActive="activeMovieId === movie.id" />
+        </div>
+      </div>
+    </div>
+
   </div>
 </template>
+
+<style scoped>
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+</style>

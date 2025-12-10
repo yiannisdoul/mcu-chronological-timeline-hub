@@ -18,7 +18,7 @@
   {
     "id": 3,
     "title": "X-Men Origins: Wolverine",
-    "tmdb_id": 1933,
+    "tmdb_id": 2080,
     "date_in_universe": "1981",
     "saga": "Non-MCU",
     "phase": "Prequel"
@@ -77,7 +77,7 @@
   {
     "id": 10,
     "title": "Captain Marvel",
-    "tmdb_id": 299534,
+    "tmdb_id": 299537,
     "date_in_universe": "1995",
     "saga": "Infinity",
     "phase": 1
@@ -93,7 +93,7 @@
   {
     "id": 12,
     "title": "X-Men",
-    "tmdb_id": 36647,
+    "tmdb_id": 36657,
     "date_in_universe": "2000",
     "saga": "Non-MCU",
     "phase": "Prequel"
@@ -117,7 +117,7 @@
   {
     "id": 15,
     "title": "X2: X-Men United",
-    "tmdb_id": 36657,
+    "tmdb_id": 36658,
     "date_in_universe": "2003",
     "saga": "Non-MCU",
     "phase": "Prequel"
@@ -267,7 +267,7 @@
   {
     "id": 33,
     "title": "Captain America: The Winter Soldier",
-    "tmdb_id": 99861,
+    "tmdb_id": 100402,
     "date_in_universe": "2014",
     "saga": "Infinity",
     "phase": 2
@@ -343,7 +343,7 @@
   {
     "id": 42,
     "title": "The Wolverine",
-    "tmdb_id": 99861,
+    "tmdb_id": 76114,
     "date_in_universe": "2015",
     "saga": "Non-MCU",
     "phase": "Prequel"
@@ -670,7 +670,7 @@
   {
     "id": 80,
     "title": "Ms. Marvel",
-    "tmdb_id": 92783,
+    "tmdb_id": 92782,
     "date_in_universe": "2025",
     "saga": "Multiverse",
     "phase": 4,
