@@ -74,3 +74,21 @@ const navigateTo = (filter) => {
 
   </div>
 </template>
+<style scoped>
+/* Define the keyframes for floating */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); } /* Move up 10px */
+  100% { transform: translateY(0px); }
+}
+
+/* Apply animation classes */
+.menu-bubble {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Offset animations so they don't move in sync */
+.menu-bubble:nth-child(1) { animation-delay: 0s; }
+.menu-bubble:nth-child(2) { animation-delay: 1s; } /* Multiverse floats later */
+.menu-bubble:nth-child(3) { animation-delay: 2s; } /* Infinity floats later */
+</style>

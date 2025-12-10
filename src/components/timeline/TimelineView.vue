@@ -1,9 +1,10 @@
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from 'vue';
+import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue'; // Added nextTick
 import { useRoute } from 'vue-router';
+import gsap from 'gsap'; // Added GSAP
 import allMovies from '../../data/marvel_data.json';
 import MovieCard from './MovieCard.vue';
-import MovieDetailModal from './MovieDetailModal.vue'; // IMPORT MODAL
+import MovieDetailModal from './MovieDetailModal.vue';
 
 const route = useRoute();
 const filterType = route.params.filter;
@@ -63,7 +64,32 @@ const initObserver = () => {
   anchors.forEach(anchor => observer.observe(anchor));
 };
 
-onMounted(() => {
+onMounted(async () => {
+  // Wait for the DOM to update so elements exist
+  await nextTick();
+  
+  // 3. ANIMATION: GSAP STAGGER
+  // This selects all cards and animates them from hidden/low to visible/place
+  gsap.from('.movie-card-wrapper', {
+    duration: 0.8,
+    opacity: 0,
+    y: 100, // Cards slide up from 100px down
+    scale: 0.8, // Cards grow slightly
+    stagger: 0.05, // 0.05 seconds delay between each card (The "Cascade")
+    ease: 'back.out(1.7)', // Gives it a slight "bouncy" pop
+    delay: 0.2
+  });
+
+  // Animate the Center Line growing
+  gsap.from('.central-line', {
+    duration: 1.5,
+    scaleY: 0, // Starts with 0 height
+    transformOrigin: 'top center',
+    ease: 'power3.out',
+    delay: 0
+  });
+
+  // Initialize Logic
   setTimeout(initObserver, 100);
   resizeObserver = new ResizeObserver(() => {
     initObserver();
@@ -78,7 +104,7 @@ onUnmounted(() => {
   if (resizeObserver) resizeObserver.disconnect();
 });
 
-// 3. MOUSE WHEEL (Desktop)
+// 4. MOUSE WHEEL (Desktop)
 const handleWheel = (evt) => {
   if (window.innerWidth >= 768 && containerRef.value && evt.deltaY !== 0) {
     evt.preventDefault();
