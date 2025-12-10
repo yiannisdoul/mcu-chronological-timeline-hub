@@ -1,0 +1,912 @@
+[
+  {
+    "id": 1,
+    "title": "X-Men: First Class",
+    "tmdb_id": 47933,
+    "date_in_universe": "1962",
+    "saga": "Non-MCU",
+    "phase": "Prequel"
+  },
+  {
+    "id": 2,
+    "title": "X-Men: Days of Future Past",
+    "tmdb_id": 127583,
+    "date_in_universe": "1973",
+    "saga": "Non-MCU",
+    "phase": "Prequel"
+  },
+  {
+    "id": 3,
+    "title": "X-Men Origins: Wolverine",
+    "tmdb_id": 1933,
+    "date_in_universe": "1981",
+    "saga": "Non-MCU",
+    "phase": "Prequel"
+  },
+  {
+    "id": 4,
+    "title": "X-Men: Apocalypse",
+    "tmdb_id": 246655,
+    "date_in_universe": "1983",
+    "saga": "Non-MCU",
+    "phase": "Prequel"
+  },
+  {
+    "id": 5,
+    "title": "X-Men: Dark Phoenix",
+    "tmdb_id": 320288,
+    "date_in_universe": "1992",
+    "saga": "Non-MCU",
+    "phase": "Prequel"
+  },
+  {
+    "id": 6,
+    "title": "Eyes of Wakanda",
+    "tmdb_id": 160081,
+    "date_in_universe": "Various",
+    "saga": "Infinity",
+    "phase": 1,
+    "type": "Series"
+  },
+  {
+    "id": 7,
+    "title": "Captain America: The First Avenger",
+    "tmdb_id": 1771,
+    "date_in_universe": "1942-1945",
+    "saga": "Infinity",
+    "phase": 1
+  },
+  {
+    "id": 8,
+    "title": "Agent Carter One-Shot",
+    "tmdb_id": 245366,
+    "date_in_universe": "1946",
+    "saga": "Infinity",
+    "phase": 1,
+    "type": "One-Shot"
+  },
+  {
+    "id": 9,
+    "title": "Agent Carter Seasons 1 and 2",
+    "tmdb_id": 61570,
+    "date_in_universe": "1946-1947",
+    "saga": "Infinity",
+    "phase": 1,
+    "type": "Series"
+  },
+  {
+    "id": 10,
+    "title": "Captain Marvel",
+    "tmdb_id": 299534,
+    "date_in_universe": "1995",
+    "saga": "Infinity",
+    "phase": 1
+  },
+  {
+    "id": 11,
+    "title": "Blade",
+    "tmdb_id": 36647,
+    "date_in_universe": "1998",
+    "saga": "Non-MCU",
+    "phase": "Prequel"
+  },
+  {
+    "id": 12,
+    "title": "X-Men",
+    "tmdb_id": 36647,
+    "date_in_universe": "2000",
+    "saga": "Non-MCU",
+    "phase": "Prequel"
+  },
+  {
+    "id": 13,
+    "title": "Blade II",
+    "tmdb_id": 36653,
+    "date_in_universe": "2002",
+    "saga": "Non-MCU",
+    "phase": "Prequel"
+  },
+  {
+    "id": 14,
+    "title": "Spider-Man (Raimi Trilogy)",
+    "tmdb_id": 557,
+    "date_in_universe": "2002",
+    "saga": "Non-MCU",
+    "phase": "Prequel"
+  },
+  {
+    "id": 15,
+    "title": "X2: X-Men United",
+    "tmdb_id": 36657,
+    "date_in_universe": "2003",
+    "saga": "Non-MCU",
+    "phase": "Prequel"
+  },
+  {
+    "id": 16,
+    "title": "Blade: Trinity",
+    "tmdb_id": 36668,
+    "date_in_universe": "2004",
+    "saga": "Non-MCU",
+    "phase": "Prequel"
+  },
+  {
+    "id": 17,
+    "title": "Spider-Man 2 (Raimi Trilogy)",
+    "tmdb_id": 558,
+    "date_in_universe": "2004",
+    "saga": "Non-MCU",
+    "phase": "Prequel"
+  },
+  {
+    "id": 18,
+    "title": "X-Men: The Last Stand",
+    "tmdb_id": 36674,
+    "date_in_universe": "2006",
+    "saga": "Non-MCU",
+    "phase": "Prequel"
+  },
+  {
+    "id": 19,
+    "title": "Spider-Man 3 (Raimi Trilogy)",
+    "tmdb_id": 559,
+    "date_in_universe": "2007",
+    "saga": "Non-MCU",
+    "phase": "Prequel"
+  },
+  {
+    "id": 20,
+    "title": "Iron Man",
+    "tmdb_id": 1726,
+    "date_in_universe": "2008",
+    "saga": "Infinity",
+    "phase": 1
+  },
+  {
+    "id": 21,
+    "title": "Iron Man 2",
+    "tmdb_id": 10138,
+    "date_in_universe": "2010",
+    "saga": "Infinity",
+    "phase": 1
+  },
+  {
+    "id": 22,
+    "title": "The Incredible Hulk",
+    "tmdb_id": 1724,
+    "date_in_universe": "2011",
+    "saga": "Infinity",
+    "phase": 1
+  },
+  {
+    "id": 23,
+    "title": "Marvel Studios One Shot: The Consultant",
+    "tmdb_id": 54930,
+    "date_in_universe": "2011",
+    "saga": "Infinity",
+    "phase": 1,
+    "type": "One-Shot"
+  },
+  {
+    "id": 24,
+    "title": "Marvel Studios One Shot: A Funny Thing Happened on the Way to Thor's Hammer",
+    "tmdb_id": 54931,
+    "date_in_universe": "2011",
+    "saga": "Infinity",
+    "phase": 1,
+    "type": "One-Shot"
+  },
+  {
+    "id": 25,
+    "title": "Thor",
+    "tmdb_id": 10195,
+    "date_in_universe": "2011",
+    "saga": "Infinity",
+    "phase": 1
+  },
+  {
+    "id": 26,
+    "title": "The Avengers",
+    "tmdb_id": 24428,
+    "date_in_universe": "2012",
+    "saga": "Infinity",
+    "phase": 1
+  },
+  {
+    "id": 27,
+    "title": "Marvel Studios One Shot: Item 47",
+    "tmdb_id": 54933,
+    "date_in_universe": "2012",
+    "saga": "Infinity",
+    "phase": 1,
+    "type": "One-Shot"
+  },
+  {
+    "id": 28,
+    "title": "Iron Man 3",
+    "tmdb_id": 68721,
+    "date_in_universe": "2012",
+    "saga": "Infinity",
+    "phase": 2
+  },
+  {
+    "id": 29,
+    "title": "Marvel Studios One Shot: All Hail the King",
+    "tmdb_id": 232049,
+    "date_in_universe": "2013",
+    "saga": "Infinity",
+    "phase": 2,
+    "type": "One-Shot"
+  },
+  {
+    "id": 30,
+    "title": "Agents of S.H.I.E.L.D. Season 1, Episodes 1–7",
+    "tmdb_id": 1403,
+    "date_in_universe": "2013",
+    "saga": "Infinity",
+    "phase": 2,
+    "type": "Series-Break"
+  },
+  {
+    "id": 31,
+    "title": "Thor: The Dark World",
+    "tmdb_id": 76338,
+    "date_in_universe": "2013",
+    "saga": "Infinity",
+    "phase": 2
+  },
+  {
+    "id": 32,
+    "title": "Agents of S.H.I.E.L.D. Season 1, Episodes 8–16",
+    "tmdb_id": 1403,
+    "date_in_universe": "2013-2014",
+    "saga": "Infinity",
+    "phase": 2,
+    "type": "Series-Break"
+  },
+  {
+    "id": 33,
+    "title": "Captain America: The Winter Soldier",
+    "tmdb_id": 99861,
+    "date_in_universe": "2014",
+    "saga": "Infinity",
+    "phase": 2
+  },
+  {
+    "id": 34,
+    "title": "Agents of S.H.I.E.L.D. Season 1, Episodes 17–22",
+    "tmdb_id": 1403,
+    "date_in_universe": "2014",
+    "saga": "Infinity",
+    "phase": 2,
+    "type": "Series-Break"
+  },
+  {
+    "id": 35,
+    "title": "Guardians of the Galaxy",
+    "tmdb_id": 118340,
+    "date_in_universe": "2014",
+    "saga": "Infinity",
+    "phase": 2
+  },
+  {
+    "id": 36,
+    "title": "Guardians of the Galaxy Vol. 2",
+    "tmdb_id": 283995,
+    "date_in_universe": "2014",
+    "saga": "Infinity",
+    "phase": 2
+  },
+  {
+    "id": 37,
+    "title": "I Am Groot Season 1",
+    "tmdb_id": 105825,
+    "date_in_universe": "2014",
+    "saga": "Infinity",
+    "phase": 2,
+    "type": "Series"
+  },
+  {
+    "id": 38,
+    "title": "Daredevil Season 1",
+    "tmdb_id": 61889,
+    "date_in_universe": "2015",
+    "saga": "Infinity",
+    "phase": 2,
+    "type": "Series"
+  },
+  {
+    "id": 39,
+    "title": "Jessica Jones Season 1",
+    "tmdb_id": 62590,
+    "date_in_universe": "2015",
+    "saga": "Infinity",
+    "phase": 2,
+    "type": "Series"
+  },
+  {
+    "id": 40,
+    "title": "Avengers: Age of Ultron",
+    "tmdb_id": 99861,
+    "date_in_universe": "2015",
+    "saga": "Infinity",
+    "phase": 2
+  },
+  {
+    "id": 41,
+    "title": "Ant-Man",
+    "tmdb_id": 10289,
+    "date_in_universe": "2015",
+    "saga": "Infinity",
+    "phase": 2
+  },
+  {
+    "id": 42,
+    "title": "The Wolverine",
+    "tmdb_id": 99861,
+    "date_in_universe": "2015",
+    "saga": "Non-MCU",
+    "phase": "Prequel"
+  },
+  {
+    "id": 43,
+    "title": "Daredevil Season 2",
+    "tmdb_id": 61889,
+    "date_in_universe": "2015-2016",
+    "saga": "Infinity",
+    "phase": 3,
+    "type": "Series"
+  },
+  {
+    "id": 44,
+    "title": "Luke Cage Season 1",
+    "tmdb_id": 65494,
+    "date_in_universe": "2016",
+    "saga": "Infinity",
+    "phase": 3,
+    "type": "Series"
+  },
+  {
+    "id": 45,
+    "title": "Iron Fist Season 1",
+    "tmdb_id": 65548,
+    "date_in_universe": "2016",
+    "saga": "Infinity",
+    "phase": 3,
+    "type": "Series"
+  },
+  {
+    "id": 46,
+    "title": "The Defenders",
+    "tmdb_id": 62285,
+    "date_in_universe": "2016",
+    "saga": "Infinity",
+    "phase": 3,
+    "type": "Series"
+  },
+  {
+    "id": 47,
+    "title": "Captain America: Civil War",
+    "tmdb_id": 271110,
+    "date_in_universe": "2016",
+    "saga": "Infinity",
+    "phase": 3
+  },
+  {
+    "id": 48,
+    "title": "Black Widow",
+    "tmdb_id": 497698,
+    "date_in_universe": "2016",
+    "saga": "Infinity",
+    "phase": 3
+  },
+  {
+    "id": 49,
+    "title": "Black Panther",
+    "tmdb_id": 284054,
+    "date_in_universe": "2016",
+    "saga": "Infinity",
+    "phase": 3
+  },
+  {
+    "id": 50,
+    "title": "Spider-Man: Homecoming",
+    "tmdb_id": 315635,
+    "date_in_universe": "2016",
+    "saga": "Infinity",
+    "phase": 3
+  },
+  {
+    "id": 51,
+    "title": "The Punisher Season 1",
+    "tmdb_id": 62967,
+    "date_in_universe": "2016",
+    "saga": "Infinity",
+    "phase": 3,
+    "type": "Series"
+  },
+  {
+    "id": 52,
+    "title": "Doctor Strange",
+    "tmdb_id": 284052,
+    "date_in_universe": "2016",
+    "saga": "Infinity",
+    "phase": 3
+  },
+  {
+    "id": 53,
+    "title": "Jessica Jones Season 2",
+    "tmdb_id": 62590,
+    "date_in_universe": "2017",
+    "saga": "Infinity",
+    "phase": 3,
+    "type": "Series"
+  },
+  {
+    "id": 54,
+    "title": "Luke Cage Season 2",
+    "tmdb_id": 65494,
+    "date_in_universe": "2017",
+    "saga": "Infinity",
+    "phase": 3,
+    "type": "Series"
+  },
+  {
+    "id": 55,
+    "title": "Iron Fist Season 2",
+    "tmdb_id": 65548,
+    "date_in_universe": "2017",
+    "saga": "Infinity",
+    "phase": 3,
+    "type": "Series"
+  },
+  {
+    "id": 56,
+    "title": "Daredevil Season 3",
+    "tmdb_id": 61889,
+    "date_in_universe": "2017",
+    "saga": "Infinity",
+    "phase": 3,
+    "type": "Series"
+  },
+  {
+    "id": 57,
+    "title": "Thor: Ragnarok",
+    "tmdb_id": 284053,
+    "date_in_universe": "2017",
+    "saga": "Infinity",
+    "phase": 3
+  },
+  {
+    "id": 58,
+    "title": "The Punisher Season 2",
+    "tmdb_id": 62967,
+    "date_in_universe": "2017",
+    "saga": "Infinity",
+    "phase": 3,
+    "type": "Series"
+  },
+  {
+    "id": 59,
+    "title": "Jessica Jones Season 3",
+    "tmdb_id": 62590,
+    "date_in_universe": "2018",
+    "saga": "Infinity",
+    "phase": 3,
+    "type": "Series"
+  },
+  {
+    "id": 60,
+    "title": "The Runaways Season 1",
+    "tmdb_id": 71831,
+    "date_in_universe": "2018",
+    "saga": "Infinity",
+    "phase": 3,
+    "type": "Series"
+  },
+  {
+    "id": 61,
+    "title": "The Runaways Season 2",
+    "tmdb_id": 71831,
+    "date_in_universe": "2018",
+    "saga": "Infinity",
+    "phase": 3,
+    "type": "Series"
+  },
+  {
+    "id": 62,
+    "title": "Cloak & Dagger Seasons 1 and 2",
+    "tmdb_id": 71822,
+    "date_in_universe": "2018",
+    "saga": "Infinity",
+    "phase": 3,
+    "type": "Series"
+  },
+  {
+    "id": 63,
+    "title": "The Runaways Season 3",
+    "tmdb_id": 71831,
+    "date_in_universe": "2018",
+    "saga": "Infinity",
+    "phase": 3,
+    "type": "Series"
+  },
+  {
+    "id": 64,
+    "title": "Ant-Man and the Wasp",
+    "tmdb_id": 363088,
+    "date_in_universe": "2018",
+    "saga": "Infinity",
+    "phase": 3
+  },
+  {
+    "id": 65,
+    "title": "Avengers: Infinity War",
+    "tmdb_id": 299536,
+    "date_in_universe": "2018",
+    "saga": "Infinity",
+    "phase": 3
+  },
+  {
+    "id": 66,
+    "title": "Avengers: Endgame",
+    "tmdb_id": 299534,
+    "date_in_universe": "2023",
+    "saga": "Infinity",
+    "phase": 3
+  },
+  {
+    "id": 67,
+    "title": "Loki Season 1",
+    "tmdb_id": 84958,
+    "date_in_universe": "Various",
+    "saga": "Multiverse",
+    "phase": 4,
+    "type": "Series"
+  },
+  {
+    "id": 68,
+    "title": "What If...? Season 1",
+    "tmdb_id": 91363,
+    "date_in_universe": "Various",
+    "saga": "Multiverse",
+    "phase": 4,
+    "type": "Series"
+  },
+  {
+    "id": 69,
+    "title": "WandaVision",
+    "tmdb_id": 85271,
+    "date_in_universe": "2023",
+    "saga": "Multiverse",
+    "phase": 4,
+    "type": "Series"
+  },
+  {
+    "id": 70,
+    "title": "Shang-Chi and the Legend of the Ten Rings",
+    "tmdb_id": 566525,
+    "date_in_universe": "2024",
+    "saga": "Multiverse",
+    "phase": 4
+  },
+  {
+    "id": 71,
+    "title": "The Falcon and the Winter Soldier",
+    "tmdb_id": 88329,
+    "date_in_universe": "2024",
+    "saga": "Multiverse",
+    "phase": 4,
+    "type": "Series"
+  },
+  {
+    "id": 72,
+    "title": "Spider-Man: Far From Home",
+    "tmdb_id": 429617,
+    "date_in_universe": "2024",
+    "saga": "Multiverse",
+    "phase": 4
+  },
+  {
+    "id": 73,
+    "title": "Eternals",
+    "tmdb_id": 524434,
+    "date_in_universe": "Various/2024",
+    "saga": "Multiverse",
+    "phase": 4
+  },
+  {
+    "id": 74,
+    "title": "Doctor Strange in the Multiverse of Madness",
+    "tmdb_id": 453395,
+    "date_in_universe": "2024",
+    "saga": "Multiverse",
+    "phase": 4
+  },
+  {
+    "id": 75,
+    "title": "Hawkeye",
+    "tmdb_id": 88326,
+    "date_in_universe": "2024",
+    "saga": "Multiverse",
+    "phase": 4,
+    "type": "Series"
+  },
+  {
+    "id": 76,
+    "title": "Moon Knight",
+    "tmdb_id": 92749,
+    "date_in_universe": "2024",
+    "saga": "Multiverse",
+    "phase": 4,
+    "type": "Series"
+  },
+  {
+    "id": 77,
+    "title": "Black Panther: Wakanda Forever",
+    "tmdb_id": 505642,
+    "date_in_universe": "2025",
+    "saga": "Multiverse",
+    "phase": 4
+  },
+  {
+    "id": 78,
+    "title": "Echo",
+    "tmdb_id": 93405,
+    "date_in_universe": "2025",
+    "saga": "Multiverse",
+    "phase": 4,
+    "type": "Series"
+  },
+  {
+    "id": 79,
+    "title": "She-Hulk: Attorney at Law",
+    "tmdb_id": 92783,
+    "date_in_universe": "2025",
+    "saga": "Multiverse",
+    "phase": 4,
+    "type": "Series"
+  },
+  {
+    "id": 80,
+    "title": "Ms. Marvel",
+    "tmdb_id": 92783,
+    "date_in_universe": "2025",
+    "saga": "Multiverse",
+    "phase": 4,
+    "type": "Series"
+  },
+  {
+    "id": 81,
+    "title": "Thor: Love and Thunder",
+    "tmdb_id": 61689,
+    "date_in_universe": "2025",
+    "saga": "Multiverse",
+    "phase": 4
+  },
+  {
+    "id": 82,
+    "title": "Ironheart",
+    "tmdb_id": 115049,
+    "date_in_universe": "2025",
+    "saga": "Multiverse",
+    "phase": 4,
+    "type": "Series"
+  },
+  {
+    "id": 83,
+    "title": "Werewolf By Night",
+    "tmdb_id": 94879,
+    "date_in_universe": "2025",
+    "saga": "Multiverse",
+    "phase": 4,
+    "type": "Special"
+  },
+  {
+    "id": 84,
+    "title": "The Guardians of the Galaxy Holiday Special",
+    "tmdb_id": 93237,
+    "date_in_universe": "2025",
+    "saga": "Multiverse",
+    "phase": 4,
+    "type": "Special"
+  },
+  {
+    "id": 85,
+    "title": "Venom: Let There Be Carnage",
+    "tmdb_id": 580489,
+    "date_in_universe": "2025",
+    "saga": "Non-MCU",
+    "phase": "Multiverse"
+  },
+  {
+    "id": 86,
+    "title": "Morbius",
+    "tmdb_id": 526896,
+    "date_in_universe": "2025",
+    "saga": "Non-MCU",
+    "phase": "Multiverse"
+  },
+  {
+    "id": 87,
+    "title": "Spider-Man: Into the Spider-Verse",
+    "tmdb_id": 324849,
+    "date_in_universe": "2025",
+    "saga": "Non-MCU",
+    "phase": "Multiverse"
+  },
+  {
+    "id": 88,
+    "title": "Spider-Man: Across the Spider-Verse",
+    "tmdb_id": 569094,
+    "date_in_universe": "2025",
+    "saga": "Non-MCU",
+    "phase": "Multiverse"
+  },
+  {
+    "id": 89,
+    "title": "Ant-Man and the Wasp: Quantumania",
+    "tmdb_id": 640146,
+    "date_in_universe": "2025",
+    "saga": "Multiverse",
+    "phase": 5
+  },
+  {
+    "id": 90,
+    "title": "Guardians of the Galaxy Vol. 3",
+    "tmdb_id": 447365,
+    "date_in_universe": "2026",
+    "saga": "Multiverse",
+    "phase": 5
+  },
+  {
+    "id": 91,
+    "title": "Secret Invasion",
+    "tmdb_id": 113824,
+    "date_in_universe": "2026",
+    "saga": "Multiverse",
+    "phase": 5,
+    "type": "Series"
+  },
+  {
+    "id": 92,
+    "title": "The Marvels",
+    "tmdb_id": 609681,
+    "date_in_universe": "2026",
+    "saga": "Multiverse",
+    "phase": 5
+  },
+  {
+    "id": 93,
+    "title": "Loki Season 2",
+    "tmdb_id": 112102,
+    "date_in_universe": "Various",
+    "saga": "Multiverse",
+    "phase": 5,
+    "type": "Series"
+  },
+  {
+    "id": 94,
+    "title": "What If...? Season 2",
+    "tmdb_id": 128912,
+    "date_in_universe": "Various",
+    "saga": "Multiverse",
+    "phase": 5,
+    "type": "Series"
+  },
+  {
+    "id": 95,
+    "title": "Deadpool & Wolverine",
+    "tmdb_id": 718916,
+    "date_in_universe": "2026",
+    "saga": "Multiverse",
+    "phase": 5
+  },
+  {
+    "id": 96,
+    "title": "Agatha All Along",
+    "tmdb_id": 139171,
+    "date_in_universe": "2026",
+    "saga": "Multiverse",
+    "phase": 5,
+    "type": "Series"
+  },
+  {
+    "id": 97,
+    "title": "What If...? Season 3",
+    "tmdb_id": 182745,
+    "date_in_universe": "Various",
+    "saga": "Multiverse",
+    "phase": 5,
+    "type": "Series"
+  },
+  {
+    "id": 98,
+    "title": "Daredevil: Born Again Season 1",
+    "tmdb_id": 128913,
+    "date_in_universe": "2026",
+    "saga": "Multiverse",
+    "phase": 5,
+    "type": "Series"
+  },
+  {
+    "id": 99,
+    "title": "Captain America: Brave New World",
+    "tmdb_id": 913637,
+    "date_in_universe": "2026",
+    "saga": "Multiverse",
+    "phase": 5
+  },
+  {
+    "id": 100,
+    "title": "Thunderbolts*",
+    "tmdb_id": 810619,
+    "date_in_universe": "2026",
+    "saga": "Multiverse",
+    "phase": 5
+  },
+  {
+    "id": 101,
+    "title": "The Fantastic Four: First Steps",
+    "tmdb_id": 615777,
+    "date_in_universe": "2026",
+    "saga": "Multiverse",
+    "phase": 6
+  },
+  {
+    "id": 102,
+    "title": "The New Mutants",
+    "tmdb_id": 340102,
+    "date_in_universe": "2026",
+    "saga": "Non-MCU",
+    "phase": "Multiverse"
+  },
+  {
+    "id": 103,
+    "title": "Untitled Spider-Man Sequel",
+    "tmdb_id": 973957,
+    "date_in_universe": "2027",
+    "saga": "Multiverse",
+    "phase": 6
+  },
+  {
+    "id": 104,
+    "title": "Blade (Upcoming)",
+    "tmdb_id": 1009949,
+    "date_in_universe": "2027",
+    "saga": "Multiverse",
+    "phase": 6
+  },
+  {
+    "id": 105,
+    "title": "Avengers: Doomsday",
+    "tmdb_id": 1155050,
+    "date_in_universe": "2027",
+    "saga": "Multiverse",
+    "phase": 6
+  },
+  {
+    "id": 106,
+    "title": "Armor Wars",
+    "tmdb_id": 1133036,
+    "date_in_universe": "2027",
+    "saga": "Multiverse",
+    "phase": 6
+  },
+  {
+    "id": 107,
+    "title": "Avengers: Secret Wars",
+    "tmdb_id": 1155051,
+    "date_in_universe": "2028",
+    "saga": "Multiverse",
+    "phase": 6
+  },
+  {
+    "id": 108,
+    "title": "Logan",
+    "tmdb_id": 263115,
+    "date_in_universe": "2029",
+    "saga": "Non-MCU",
+    "phase": "Multiverse"
+  }
+]
