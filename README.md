@@ -1,4 +1,4 @@
-# ✨ MCU Chronos: The Super Chronological Multiverse Timeline
+# ✨ TheUltimateMCU.com: The Super Chronological Multiverse Timeline
 
 ## 🚀 Project Overview
 **MCU Chronos** is a single-page interactive web application that transforms the traditional movie list into a dynamic, scroll-controlled timeline. Built with **Vue.js** and **GSAP ScrollTrigger**, this project provides the definitive, chronological viewing order of the Marvel Cinematic Universe, meticulously weaving in the full list of canonical series (The Defenders Saga, Agents of S.H.I.E.L.D., etc.) and non-MCU films (X-Men, Blade, Sonyverse) to create the complete **Multiverse Order**.
@@ -38,5 +38,4 @@ You must have [Node.js](https://nodejs.org/en/) (v16+) and npm installed.
 ### 1. Clone the Repository
 
 ```bash
-git clone [https://github.com/YOUR_USERNAME/marvel-timeline.git](https://github.com/YOUR_USERNAME/marvel-timeline.git)
-cd marvel-timeline
+git clone [https://github.com/yiannisdoul/mcu-chronological-timeline-hub]
