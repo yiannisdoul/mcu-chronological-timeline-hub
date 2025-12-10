@@ -38,5 +38,4 @@ You must have [Node.js](https://nodejs.org/en/) (v16+) and npm installed.
 ### 1. Clone the Repository
 
 ```bash
-git clone [https://github.com/YOUR_USERNAME/marvel-timeline.git](https://github.com/YOUR_USERNAME/marvel-timeline.git)
-cd marvel-timeline
+git clone [https://github.com/yiannisdoul/mcu-chronological-timeline-hub]
