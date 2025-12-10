@@ -3,6 +3,7 @@ import { ref, computed, onMounted, onUnmounted } from 'vue';
 import { useRoute } from 'vue-router';
 import allMovies from '../../data/marvel_data.json';
 import MovieCard from './MovieCard.vue';
+import MovieDetailModal from './MovieDetailModal.vue'; // IMPORT MODAL
 
 const route = useRoute();
 const filterType = route.params.filter;
@@ -10,6 +11,17 @@ const containerRef = ref(null);
 const activeMovieId = ref(null);
 let observer = null;
 let resizeObserver = null;
+
+// --- MODAL STATE ---
+const selectedMovie = ref(null);
+const isModalOpen = computed(() => selectedMovie.value !== null);
+
+const openModal = (movie) => {
+  selectedMovie.value = movie;
+};
+const closeModal = () => {
+  selectedMovie.value = null;
+};
 
 // 1. FILTERING
 const filteredMovies = computed(() => {
@@ -29,11 +41,6 @@ const initObserver = () => {
   if (observer) observer.disconnect();
 
   const isDesktop = window.innerWidth >= 768;
-  
-  // ROOT MARGIN SETTINGS:
-  // Desktop: 0px -50% (Razor thin vertical line in center)
-  // Mobile: -40% 0px (Horizontal strip in center). 
-  // We use -40% instead of -50% on mobile to make it "catch" the cards easier on touch screens.
   const rootMargin = isDesktop 
     ? '0px -50% 0px -50%'   
     : '-40% 0px -40% 0px';  
@@ -107,7 +114,8 @@ const handleWheel = (evt) => {
       <div 
         v-for="(movie, index) in filteredMovies" 
         :key="movie.id"
-        class="movie-card-wrapper relative px-12 inline-block align-middle snap-center" 
+        class="movie-card-wrapper relative px-12 inline-block align-middle snap-center cursor-pointer"
+        @click="openModal(movie)"
       >
         <div 
           class="observer-target absolute top-1/2 left-1/2 w-1 h-1 -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-0"
@@ -131,7 +139,8 @@ const handleWheel = (evt) => {
       <div 
         v-for="(movie, index) in filteredMovies" 
         :key="movie.id"
-        class="movie-card-wrapper relative grid grid-cols-2 w-full snap-center"
+        class="movie-card-wrapper relative grid grid-cols-2 w-full snap-center cursor-pointer"
+        @click="openModal(movie)"
       >
         <div class="observer-target absolute top-1/2 left-1/2 w-1 h-1 -translate-x-1/2 -translate-y-1/2" :data-id="movie.id"></div>
 
@@ -143,6 +152,12 @@ const handleWheel = (evt) => {
         </div>
       </div>
     </div>
+
+    <MovieDetailModal 
+      v-if="isModalOpen" 
+      :movie="selectedMovie" 
+      @close="closeModal" 
+    />
 
   </div>
 </template>
