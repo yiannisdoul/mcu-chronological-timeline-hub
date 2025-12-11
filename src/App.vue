@@ -1,5 +1,7 @@
 <script setup>
 import { RouterView } from 'vue-router'
+import NewsletterBadge from './components/ui/NewsletterBadge.vue'; 
+import TechOasisBadge from './components/ui/TechOasisBadge.vue';
 </script>
 
 <template>
@@ -8,6 +10,8 @@ import { RouterView } from 'vue-router'
       <component :is="Component" />
     </transition>
   </router-view>
+
+  <NewsletterBadge />  <TechOasisBadge />
 </template>
 
 <style>
@@ -22,7 +26,7 @@ import { RouterView } from 'vue-router'
   opacity: 0;
 }
 
-/* Ensure background stays black during transition */
+/* Base Styles */
 body {
   background-color: black;
   overflow: hidden; 
